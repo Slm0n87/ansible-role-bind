@@ -57,6 +57,9 @@ options {
     clients { {{ bind_dns64_clients|join('; ') }};  };
   };
 {% endif %}
+{% if bind_options_additional %}
+  {{ bind_options_additional }}
+{% endif %}
 };
 
 {% if bind_statistics_channels %}
@@ -93,6 +96,9 @@ logging {
   };
   category "{{ log.name }}" { "{{ log.name }}"; };
 {% endfor %}
+{% endif %}
+{% if bind_logging_additional %}
+  {{ bind_logging_additional }}
 {% endif %}
 };
 

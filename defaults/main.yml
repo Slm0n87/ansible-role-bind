@@ -84,3 +84,7 @@ bind_python_version: "{{ bind_default_python_version }}"
 
 # Log file
 bind_log: "data/named.run"
+
+# Additional generic options
+bind_options_additional: false
+bind_logging_additional: false
