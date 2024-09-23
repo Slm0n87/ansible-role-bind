@@ -1,0 +1,6 @@
+#
+# run resolvconf?
+RESOLVCONF=no
+
+# startup options for the server
+OPTIONS="-u bind{% if bind_options_ipv4 %} -4{% endif %}"

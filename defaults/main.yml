@@ -88,3 +88,6 @@ bind_log: "data/named.run"
 # Additional generic options
 bind_options_additional: false
 bind_logging_additional: false
+
+# IPv4 only
+bind_options_ipv4: false

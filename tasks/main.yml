@@ -109,6 +109,14 @@
   notify: reload bind
   tags: bind
 
+- name: BIND default file
+  template:
+    src: etc_default_named.j2
+    dest: "{{ bind_default_file }}"
+  become: yes
+  notify: restart bind
+  tags: bind
+
 - name: Start BIND service
   service:
     name: "{{ bind_service }}"
